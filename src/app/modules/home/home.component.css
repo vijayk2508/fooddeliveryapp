@@ -1,0 +1,212 @@
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*===== Colors =====*/
+  --first-color: #fca4a6;
+  --first-color-dark: #c1576a;
+  --first-color-darken: #a83e51;
+  --white-color: #fcf8f8;
+
+  /*===== Font and typography =====*/
+  /* --body-font: 'Poppins', sans-serif; */
+  --big-font-size: 2.5rem;
+  --normal-font-size: 0.938rem;
+
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 5rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/*-------------Layout-------------*/
+#home,
+#about,
+#work,
+#contact {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+#home {
+  background-image: linear-gradient(45deg, #050505, #acacaca1),
+    url("../../../assets/images/background_img1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+}
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1300px;
+  display: grid;
+  grid-template-columns: 100%;
+  column-gap: 2rem;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*===== HOME =====*/
+#home {
+  background-color: var(--first-color);
+  overflow: hidden;
+}
+
+.home__container {
+  height: calc(100vh - var(--header-height));
+  grid-template-rows: repeat(2, max-content);
+  row-gap: 1.5rem;
+}
+
+.home__img {
+  position: relative;
+  padding-top: 1.5rem;
+  justify-self: center;
+  width: 302px;
+  height: 233px;
+}
+
+.home__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+
+.home__data {
+  color: var(--white-color);
+}
+
+.home__title {
+  margin-bottom: 1rem;
+  line-height: 1;
+  font-size: 90px;
+  font-weight: bold;
+}
+
+.home__description {
+  margin-bottom: 2.5rem;
+  font-size: 30px;
+  line-height: 1.5;
+}
+
+.home__button {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  color: var(--first-color-darken);
+  background: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.home__button:hover {
+  background-color: var(--first-color-darken);
+  color: white;
+}
+
+/* Home End*/
+
+/*Our Values Start*/
+#ourvaluedclient {
+  padding-top: 100px;
+}
+
+#ourvaluedclient .heading {
+  text-align: center;
+}
+/*Our Values End*/
+
+/**/
+#about {
+  background-color: #aaa;
+}
+
+#work {
+  background-color: #888;
+}
+
+#contact {
+  background-color: #666;
+}
+/**/
+
+/* ===== MEDIA QUERIES =====*/
+@media screen and (max-width: 768px) {
+  #home,
+  #about,
+  #work,
+  #contact {
+    height: 160vh;
+    padding-top: 80px !important;
+  }
+
+  .home__img {
+    margin-bottom: 50px;
+  }
+  #home {
+    height: calc(230vh - 90vh);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media screen and (min-width: 768px) {
+  .home__container {
+    height: 100vh;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    row-gap: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home__img {
+    order: 1;
+  }
+
+  .home__img img {
+    height: 380px;
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home__container {
+    justify-content: initial;
+    column-gap: 5.5rem;
+  }
+
+  .home__img {
+    width: 604px;
+    height: 466px;
+  }
+}
+/* hero */
