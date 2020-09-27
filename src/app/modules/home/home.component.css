@@ -130,13 +130,54 @@
 
 /*Our Values Start*/
 #ourvaluedclient {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 #ourvaluedclient .heading {
   text-align: center;
 }
+
+#ourvaluedclient_companies_logo figure img {
+  height: 110px;
+}
 /*Our Values End*/
+
+/* banner*/
+#banner figure {
+  margin: 0;
+}
+
+#banner figure img {
+  height: 210px;
+  width: 100%;
+}
+/* banner*/
+
+/* Key Features*/
+
+ul{
+  padding:0;
+}
+li{
+  padding:0.15em 0 0.5em 1.5em;
+  margin-bottom:0.2em;
+  text-indent:0.4em;
+  list-style:none;
+  background-repeat:no-repeat;
+  background-image:url("../../../assets/images/list_icon.png");
+}
+/* Key Features end*/
+
+/*portal start*/
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+/*porattal end*/
 
 /**/
 #about {
@@ -167,6 +208,9 @@
   }
   #home {
     height: calc(230vh - 90vh);
+  }
+  #ourvaluedclient_companies_logo figure {
+    text-align: center;
   }
 }
 

@@ -52,10 +52,11 @@ a {
   background-color: transparent;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
 }
-
 
 h1,
 p,
@@ -72,6 +73,8 @@ a {
   text-decoration: none;
 }
 
+figure,
+figure img,
 img {
   max-width: 100%;
   height: auto;
